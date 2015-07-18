@@ -1,0 +1,8 @@
+config = {
+    # Restrict all linux-* artefacts to that path
+    'linux-path': 'drivers/gpu/drm'
+}
+
+metrics = [
+    { 'name': 'smatch-warnings' }
+]
