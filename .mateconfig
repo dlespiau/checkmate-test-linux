@@ -1,0 +1,12 @@
+config = {
+    # Restrict all linux-* artefacts to that path
+    'linux-path': 'drivers/gpu/drm',
+
+    # One can also specify additional arguments to give to checkpatch.pl
+    'checkpatch-extra-args': '--ignore SPLIT_STRING,COMPLEX_MACRO',
+}
+
+metrics = [
+    { 'name': 'checkpatch-errors', },
+    { 'name': 'checkpatch-warnings', },
+]
