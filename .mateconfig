@@ -1,0 +1,18 @@
+config = {
+    # Restrict all linux-* artefacts to that path
+    'linux-path': 'drivers/gpu/drm',
+
+    # checkpatch.pl is, by default, called on the commit given as argument to
+    # checkmate. It can also be called on a list of files if that's what you
+    # want.
+    'checkpatch-files': 'drivers/gpu/drm/*.c drivers/gpu/drm/i915/*.c',
+    # 'checkpatch-files': 'drivers/gpu/drm/i915/intel_display.c',
+
+    # One can also specify additional arguments to give to checkpatch.pl
+    'checkpatch-extra-args': '--ignore SPLIT_STRING,COMPLEX_MACRO'
+}
+
+metrics = [
+    { 'name': 'checkpatch-errors', },
+    { 'name': 'checkpatch-warnings', },
+]
